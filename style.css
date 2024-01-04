@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-size: 1.125rem;
+    background-color: #E9ECF0;
+}
+
+i {
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: .8em;
+    background-color: #fff;
+    padding: 1.5em 0.875em;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+    font-weight: 700;
+}
+
+label {
+    width: 100%;
+}
+
+input[type="color"] {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    height: 4em;
+    width: 4.5em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 4px solid #d1d5db;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+    height: 4em;
+    padding: 0 1.25em;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.options {
+    position: absolute;
+    width: 100%;
+    padding: 1.25emg 0;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-top: 0.25em;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+
+.option {
+    padding: 0.2em 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.option:hover {
+    background-color: #e8e9ea;
+}
+/* add check icon from box icon using after sudo selector */
+.option:has(input[type="radio"]:checked)::after {
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: url('assets/check.svg') no-repeat center center/cover;
+}
+
+.select-menu {
+    position: relative;
+    width: 380px;
+}
+
+.select-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+    padding: 1.25em;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    width: 36.3em;
+}
+
+.color {
+    height: 24em;
+    flex: 1;
+    display: flex;
+}
+
+.hex {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    align-self: flex-end;
+    font-size: .9em;
+    padding: 1em 0;
+    pointer-events: none;
+}
+.color1 {
+    background-color: #000000;
+}
+
+.color2 {
+    background-color: #1A1919;
+}
+
+.color3 {
+    background-color: #343232;
+}
+
+.color4 {
+    background-color: #4F4A4A;
+}
+
+.color5 {
+    background-color: #6A6262;
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+    opacity: 100%;
+}

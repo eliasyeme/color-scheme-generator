@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Gen</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <input type="color" name="color" id="color">
+            <div class="select-menu">
+                <div class="select-btn" id="select-btn">
+                    <span class="select-text" id="select-text">Monochrome</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="options hidden" id="options">
+                    <div class="option">
+                        <input type="radio" name="option" id="monochrome" checked>
+                        <label for="monochrome">Monochrome</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="monochrome-dark">
+                        <label for="monochrome-dark">Monochrome Dark</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="monochrome-light">
+                        <label for="monochrome-light">Monochrome Light</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="analogic">
+                        <label for="analogic">Analogic</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="complement">
+                        <label for="complement">Complement</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="analogic-complement">
+                        <label for="analogic-complement">Analogic Complement</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="option" id="triad">
+                        <label for="triad">Triad</label>
+                    </div>
+                </div>
+            </div>
+            <button id="submit">Get color scheme</button>
+        </form>
+        <div id="colors" class="colors">
+            <div class="color color1">
+                <span class="hex">#000000</span>
+            </div>
+            <div class="color color2">
+                <span class="hex">#1A1919</span>
+            </div>
+            <div class="color color3">
+                <span class="hex">#343232</span>
+            </div>
+            <div class="color color4">
+                <span class="hex">#4F4A4A</span>
+            </div>
+            <div class="color color5">
+                <span class="hex">#6A6262</span>
+            </div>
+        </div>
+        <div id="tooltip" class="tooltip">copied</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
